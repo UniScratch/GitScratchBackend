@@ -21,3 +21,14 @@ class User(Base):
     regDate = Column(Integer)
     lastLoginDate = Column(Integer)
     settings = Column(String(1024))
+    
+class Captcha(Base):
+    __tablename__ = 'captcha'
+    
+    id = Column(Integer,primary_key=True, index=True)
+    year = Column(Integer)
+    month = Column(Integer)
+    day = Column(Integer)
+    type = Column(Integer)
+    data = Column(String(64))
+    insertTime = Column(Integer)
