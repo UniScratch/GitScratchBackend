@@ -3,10 +3,10 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from config import settings
 
-class _DBConnet:
+class _DBConnect():
     _SQLALCHEMY_DATABASE_URL = 'mysql+pymysql://'+settings.db_username+':'+settings.db_password+'@'+settings.db_host_address+'/'+settings.db_database_name
     _engine = create_engine(_SQLALCHEMY_DATABASE_URL)
-    SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
+    SessionLocal = sessionmaker(bind=_engine, autocommit=False, autoflush=False)
     Base = declarative_base
     Base.metadata.create_all(bind=_engine)
 

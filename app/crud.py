@@ -19,8 +19,8 @@ def getCaptcha(db: Session):
 
 # 验证Captcha
 def VerifyCaptcha(db: Session,captchaAnswer: schemas.VerifyCaptchaByYear):
-    answerRow=db.query(models.CaptchaSession).filter(models.CaptchaSession.sessionId=captchaAnswer.id).first()
-    db.query(models.CaptchaSession).filter(models.CaptchaSession.sessionId=captchaAnswer.id).delete() # 销毁会话
+    answerRow=db.query(models.CaptchaSession).filter(sessionId=captchaAnswer.id).first()
+    db.query(models.CaptchaSession).filter(sessionId=captchaAnswer.id).delete() # 销毁会话
     if answerRow.year==captchaAnswer.year:
         return 0
     else:
