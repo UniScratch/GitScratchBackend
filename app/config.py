@@ -9,6 +9,5 @@ class Settings(BaseSettings):
     db_username: str ='gitsc'
     db_password: str='123456'
     db_database_name: str='gitsc'
-    
-        
+
 settings = Settings()

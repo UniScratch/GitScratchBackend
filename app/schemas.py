@@ -5,7 +5,7 @@ class RegUser(BaseModel):
     username: str
     email: str
     password: str
-    class Config:
+    class Config():
         orm_mode = True
 
 class LoginUser(BaseModel):
@@ -13,17 +13,17 @@ class LoginUser(BaseModel):
     password: str
     captchaId: str
     captchaAnswer: int
-    class Config:
+    class Config():
         orm_mode = True
 
 class GetUserInfoById(BaseModel):
     id: str
-    class Config:
+    class Config():
         orm_mode = True
 
 class GetUserInfoByName(BaseModel):
     username: str
-    class Config:
+    class Config():
         orm_mode = True
 
 class UserInfo(BaseModel):
@@ -41,23 +41,23 @@ class UserInfo(BaseModel):
     following: int
     regDate: int
     lastLoginDate: int
-    class Config:
+    class Config():
         orm_mode = True
 
 class CaptchaById(BaseModel):
     id: str
-    class Config:
+    class Config():
         orm_mode = True
-    
+
 class CaptchaInfo(BaseModel):
     year: int
     month: int
     day: int
-    class Config:
+    class Config():
         orm_mode = True
 
 class VerifyCaptchaByYear(BaseModel):
     id: str
     year: int
-    class Config:
+    class Config():
         orm_mode = True

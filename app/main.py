@@ -1,6 +1,6 @@
 import uvicorn
 from fastapi import FastAPI,Depends
-from config import settings
+from .config import settings
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()

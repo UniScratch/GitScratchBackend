@@ -21,7 +21,7 @@ class User(Base):
     regDate = Column(Integer)
     lastLoginDate = Column(Integer)
     settings = Column(String(1024))
-    
+
 class Captcha(Base):
     __tablename__ = 'today_in_history'
     
@@ -32,7 +32,7 @@ class Captcha(Base):
     type = Column(Integer)
     data = Column(String(64))
     insert_time = Column(Integer)
-    
+
 class CaptchaSession(Base):
     __tablename__ = 'captchaSession'
     
