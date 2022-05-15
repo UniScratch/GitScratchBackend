@@ -32,3 +32,11 @@ class Captcha(Base):
     type = Column(Integer)
     data = Column(String(64))
     insertTime = Column(Integer)
+    
+class CaptchaSession(Base):
+    __tablename__ = 'captchaSession'
+    
+    id = Column(Integer,primary_key=True, index=True)
+    data = Column(String(64))
+    year = Column(Integer)
+    sessionId = Column(String(64))
