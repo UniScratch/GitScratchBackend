@@ -11,6 +11,8 @@ class RegUser(BaseModel):
 class LoginUser(BaseModel):
     email: str
     password: str
+    captchaId: str
+    captchaAnswer: int
     class Config:
         orm_mode = True
 
@@ -56,6 +58,6 @@ class CaptchaInfo(BaseModel):
 
 class VerifyCaptchaByYear(BaseModel):
     id: str
-    year: str
+    year: int
     class Config:
         orm_mode = True

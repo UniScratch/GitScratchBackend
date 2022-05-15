@@ -26,21 +26,21 @@ SET time_zone = "+00:00";
 -- 表的结构 `today_in_history`
 --
 
-CREATE TABLE `captcha` (
-  `id`` bigint(20) UNSIGNED NOT NULL,
+CREATE TABLE `today_in_history` (
+  `ID` bigint(20) UNSIGNED NOT NULL,
   `year` int(8) NOT NULL,
   `month` int(2) UNSIGNED NOT NULL,
   `day` int(2) UNSIGNED NOT NULL,
   `type` int(1) UNSIGNED NOT NULL,
   `data` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `insertTime` bigint(20) UNSIGNED NOT NULL
+  `insert_time` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 转存表中的数据 `today_in_history`
 --
 
-INSERT INTO `today_in_history` (`id``, `year`, `month`, `day`, `type`, `data`, `insertTime`) VALUES
+INSERT INTO `today_in_history` (`ID`, `year`, `month`, `day`, `type`, `data`, `insert_time`) VALUES
 (1, -4713, 1, 1, 1, '中午12点儒略日开始计算。', 0),
 (2, -153, 1, 1, 1, '罗马执政官职务开始。', 0),
 (3, -45, 1, 1, 1, '罗马共和国开始采用儒略历。', 0),

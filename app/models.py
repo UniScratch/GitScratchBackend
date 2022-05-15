@@ -23,7 +23,7 @@ class User(Base):
     settings = Column(String(1024))
     
 class Captcha(Base):
-    __tablename__ = 'captcha'
+    __tablename__ = 'today_in_history'
     
     id = Column(Integer,primary_key=True, index=True)
     year = Column(Integer)
@@ -31,7 +31,7 @@ class Captcha(Base):
     day = Column(Integer)
     type = Column(Integer)
     data = Column(String(64))
-    insertTime = Column(Integer)
+    insert_time = Column(Integer)
     
 class CaptchaSession(Base):
     __tablename__ = 'captchaSession'
