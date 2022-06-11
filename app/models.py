@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Boolean
-from database import Base
+from .database import BASE
 
-class User(Base):
+class User(BASE):
     __tablename__ = 'user'
 
     id = Column(Integer, primary_key=True, index=True) # 设置主键和索引
@@ -22,7 +22,7 @@ class User(Base):
     lastLoginDate = Column(Integer)
     settings = Column(String(1024))
 
-class Captcha(Base):
+class Captcha(BASE):
     __tablename__ = 'today_in_history'
     
     id = Column(Integer,primary_key=True, index=True)
@@ -33,7 +33,7 @@ class Captcha(Base):
     data = Column(String(64))
     insert_time = Column(Integer)
 
-class CaptchaSession(Base):
+class CaptchaSession(BASE):
     __tablename__ = 'captchaSession'
     
     id = Column(Integer,primary_key=True, index=True)

@@ -1,3 +1,4 @@
+import os
 import re
 import random
 from PIL import Image, ImageDraw, ImageFont
@@ -38,7 +39,7 @@ def line_break(line):
 def getImg(content, name):
     output_str = content
     output_str = line_break(output_str + "\n")
-    d_font = ImageFont.truetype("SourceHanSansCN-Normal.otf", CHAR_SIZE)
+    d_font = ImageFont.truetype(font=os.path.join(os.getcwd(), "app/imglib/SourceHanSansCN-Normal.otf"), size=CHAR_SIZE)
     lines = output_str.count("\n")
 
     image = Image.new(

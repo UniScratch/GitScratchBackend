@@ -2,8 +2,7 @@ from sqlalchemy.orm import Session
 from random import randint
 from time import time
 import hashlib
-import models
-import schemas
+from . import models, schemas
 
 
 # 获取Captcha

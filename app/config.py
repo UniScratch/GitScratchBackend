@@ -8,6 +8,6 @@ class Settings(BaseSettings):
     db_host_port: int = 3306
     db_username: str = 'gitsc'
     db_password: str = '123456'
-    db_database_name: str = 'gitsc'
+    db_database_name: str = 'mysql'
 
 settings = Settings()
