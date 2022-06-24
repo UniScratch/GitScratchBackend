@@ -10,7 +10,7 @@ app = FastAPI()
 async def root():
     return {"message": "Hello world! GitScratch!"}
 
-    
+
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 if __name__ == '__main__':
