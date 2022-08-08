@@ -2,6 +2,7 @@
 
 > ## Warning!
 > 此仓库已废弃，对于此仓库的开发将不会得到任何支持。
+> 
 > **新的支持仓库：[UniScratch/gitscratch-backend-flask](https://github.com/UniScratch/gitscratch-backend-flask)，由Flask构建。**
 
 GitScratch 社区后端。使用 `FastAPI` 构建。
